@@ -1,0 +1,6 @@
+{
+  "name": "DocuQuery RAG",
+  "description": "RAG-powered document question answering assistant with vector search, chunking, and source citations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
