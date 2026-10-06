@@ -49,10 +49,10 @@ private val LightColorScheme =
   )
 
 @Composable
-fun MyApplicationTheme(
+fun DocuQueryTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
-  // Dynamic color is available on Android 12+
-  dynamicColor: Boolean = true,
+  // Dynamic color is available on Android 12+, disabled by default to preserve Bento Grid branding
+  dynamicColor: Boolean = false,
   content: @Composable () -> Unit,
 ) {
   val colorScheme =
@@ -67,4 +67,13 @@ fun MyApplicationTheme(
     }
 
   MaterialTheme(colorScheme = colorScheme, typography = Typography, content = content)
+}
+
+@Composable
+fun MyApplicationTheme(
+  darkTheme: Boolean = isSystemInDarkTheme(),
+  dynamicColor: Boolean = false,
+  content: @Composable () -> Unit,
+) {
+  DocuQueryTheme(darkTheme = darkTheme, dynamicColor = dynamicColor, content = content)
 }
